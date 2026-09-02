@@ -1,0 +1,51 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+*/venv/
+*/.venv/
+*/env/
+
+# Environment / secrets
+.env
+*.env
+*.local
+
+# ---- IDE / Editor ----
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Jupyter (in case any project used notebooks) ----
+.ipynb_checkpoints/
+
+# ---- Testing / coverage ----
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---- Logs / temp ----
+*.log
+*.tmp
+
+# ------ Script files ------
+*.sh
