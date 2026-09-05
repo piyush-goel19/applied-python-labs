@@ -35,6 +35,9 @@ while score < 50:
     else:
         user_guess = screen.textinput(title=f"{score}/50 States Correct", prompt="Enter a state name?").title()
     if user_guess == "Exit":
+        missing_states = [state for state in states_list if state not in guessed_states]
+        df = pd.DataFrame(missing_states)
+        df.to_csv("states_to_learn.csv")
         break
     if user_guess in states_list:
         index = states_list.index(user_guess)
@@ -47,14 +50,3 @@ while score < 50:
 
 
 #screen.exitonclick()
-
-#save missing states to csv
-print(guessed_states)
-missing_states = []
-for state in states_list:
-    if state not in guessed_states:
-        missing_states.append(state)
-
-print(missing_states)
-df = pd.DataFrame(missing_states)
-df.to_csv("states_to_learn.csv")
